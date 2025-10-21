@@ -1,0 +1,74 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.ibb.co.com/PsKx7Lsb/guiter-image.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers.",
+    "image": "https://i.ibb.co.com/zWWqWjn2/spoken-english.webp",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Basic Coding in Python",
+    "providerName": "John Patel",
+    "providerEmail": "john@skillswap.com",
+    "price": 15,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Learn Python fundamentals with hands-on exercises.",
+    "image": "https://i.ibb.co.com/HfPNDRKM/python-training-service.png",
+    "category": "Programming"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Emily Nguyen",
+    "providerEmail": "emily@skillswap.com",
+    "price": 12,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Guided yoga sessions focused on flexibility and breathing.",
+    "image": "https://i.ibb.co.com/1Jv06QZL/Verywell-01-3567198-Warrior-One-acb9d35e634e4f548c2d251e9c739c74.jpg",
+    "category": "Wellness"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Watercolor Painting Basics",
+    "providerName": "Liam Torres",
+    "providerEmail": "liam@skillswap.com",
+    "price": 18,
+    "rating": 4.5,
+    "slotsAvailable": 2,
+    "description": "Learn how to paint beautiful scenes with watercolors.",
+    "image": "https://i.ibb.co.com/dssQY7bg/Download-1024x768-jpg.webp",
+    "category": "Art"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Intro to Digital Marketing",
+    "providerName": "Priya Singh",
+    "providerEmail": "priya@skillswap.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Explore SEO, social media, and online branding fundamentals.",
+    "image": "https://i.ibb.co.com/WN5Rrkbp/digital-marketing.jpg",
+    "category": "Business"
+  }
+]

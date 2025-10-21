@@ -10,7 +10,7 @@ const HomeLayouts = () => {
                 <Navbar/>
             </header>
 
-          <main className='flex-grow'>
+          <main className='flex-grow w-11/12 mx-auto'>
               <Outlet></Outlet>
           </main>
 

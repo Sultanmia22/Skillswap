@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.details-style{
+  @apply text-xl font-semibold
+}
+
+nav a.active{
+  color: red;
+  border-bottom: 2px solid red;
+}

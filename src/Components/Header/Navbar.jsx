@@ -3,8 +3,8 @@ import logoImg from '../../assets/logo.png'
 import { NavLink } from 'react-router';
 const Navbar = () => {
     const links = <>
-         <NavLink className='font-semibold text-[18px]'> Home </NavLink>
-         <NavLink className='font-semibold text-[18px]'> My Profile </NavLink>
+         <NavLink to='/' className='font-semibold  text-xl'> Home </NavLink>
+         <NavLink to='/profile' className='font-semibold text-xl'> My Profile </NavLink>
     </>
     return (
         <nav className="navbar bg-base-100 shadow-sm md:px-20">
@@ -21,7 +21,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <img src={logoImg} alt="" className='w-12 h-12' />
+                <img src={logoImg} alt="" className='w-12 h-12 ' />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-4">
