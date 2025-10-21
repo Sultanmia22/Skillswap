@@ -16,7 +16,7 @@ const PopularSkill = () => {
 
     return (
         <div>
-            <h2 className='text-4xl font-bold text-center'> Popular Skills </h2>
+            <h2 className='text-4xl font-bold text-center underline pb-2'> Popular Skills </h2>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 my-6'>
                 
             {

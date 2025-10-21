@@ -5,7 +5,9 @@ import { Link } from 'react-router';
 
 const Home = () => {
     return (
+        
         <div>
+            <title> Home Pages </title>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item flex relative justify-center items-center flex-col w-full bg-linear-to-r from-cyan-500 to-blue-500 gap-5 my-6 rounded-lg  py-10 md:py-32">
                      

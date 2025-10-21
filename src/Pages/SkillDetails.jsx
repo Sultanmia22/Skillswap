@@ -31,6 +31,7 @@ const SkillDetails = () => {
 
     return (
         <div>
+            <title>Detials Pages</title>
             <div className='flex flex-col md:flex-row py-10  gap-20 '>
 
                 <div className=' border-2 border-gray-200 p-8 rounded-lg shadow'>
@@ -58,9 +59,9 @@ const SkillDetails = () => {
                     <form onSubmit={handleSubmit}>
                         <fieldset className="fieldset">
                         <label className="label font-medium">Name</label>
-                        <input type="text" className="input w-full" placeholder="Write Your Name" name='name'/>   
+                        <input type="text" className="input w-full" placeholder="Write Your Name" name='name' required/>   
                         <label className="label font-medium">Email</label>
-                        <input type="email" className="input w-full" placeholder="Enter Your Email" name='email' />                       
+                        <input type="email" className="input w-full" placeholder="Enter Your Email" name='email' required/>                       
                         <button className="btn btn-primary mt-4 mx-w-[400px]"> Submit Now </button>
                     </fieldset>
                     </form>

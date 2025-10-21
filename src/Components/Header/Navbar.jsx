@@ -1,6 +1,6 @@
 import React from 'react';
 import logoImg from '../../assets/logo.png'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 const Navbar = () => {
     const links = <>
          <NavLink to='/' className='font-semibold  text-xl'> Home </NavLink>
@@ -31,8 +31,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex gap-4">
-               <button className='btn btn-outline btn-primary'>Login</button>
-               <button className='btn btn-outline btn-secondary'>Sign up</button>
+               <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
+               <Link to='/signup' className='btn btn-outline btn-secondary'>Sign up</Link>
             </div>
         </nav>
     );

@@ -3,6 +3,8 @@ import HomeLayouts from "../Layouts/HomeLayouts";
 import Home from "../Pages/Home";
 import Profile from "../Pages/Profile";
 import SkillDetails from "../Pages/SkillDetails";
+import SignUp from "../Pages/SignUp";
+import SignIn from "../Pages/SignIn";
 
 
 const router = createBrowserRouter([
@@ -22,7 +24,14 @@ const router = createBrowserRouter([
         path: '/newsdetails/:id',
         element: <SkillDetails/>,
         loader: () => fetch('/skills.json'),
-        
+      },
+      {
+        path: '/signup',
+        element: <SignUp/>
+      },
+      {
+        path: '/login',
+        element: <SignIn/>
       }
     ]
   },
