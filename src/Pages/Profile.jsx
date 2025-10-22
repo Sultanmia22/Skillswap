@@ -41,7 +41,7 @@ const Profile = () => {
                                 <p> <span>Phone:</span> 013454346543 </p>
                             </div>
                         </div>
-                        <div className='flex justify-center'>  <Link to='/updateProfile' className='btn btn-primary mx-auto text-xl'> <MdEdit /> Update Profile </Link> </div>
+                        <div className='flex justify-center'>  <Link to='/updateProfile' className='btn btn-primary mx-auto md:text-xl'> <MdEdit /> Update Profile </Link> </div>
                     </div>
             </div>
         </div>
