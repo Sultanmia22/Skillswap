@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { use } from 'react';
 import logoImg from '../../assets/logo.png'
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../PrivetContent/AuthContext';
+import { toast } from 'react-toastify';
 const Navbar = () => {
+    const { user,signOutUser ,setUser} = use(AuthContext)
     const links = <>
-         <NavLink to='/' className='font-semibold  text-xl'> Home </NavLink>
-         <NavLink to='/profile' className='font-semibold text-xl'> My Profile </NavLink>
+        <NavLink to='/' className='font-semibold  text-xl'> Home </NavLink>
+        <NavLink to='/profile' className='font-semibold text-xl'> My Profile </NavLink>
     </>
+
+    //! Sign Out Function 
+    const handleSignOut = () => {
+        signOutUser()
+        .then(() => {
+            setUser(null)
+            toast.success('Sign Out Successfull')
+        })
+        .catch( () => {
+
+        })
+    }
+
     return (
         <nav className="navbar bg-base-100 shadow-sm md:px-20">
             <div className="navbar-start">
@@ -30,9 +46,14 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end flex gap-4">
-               <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
-               <Link to='/signup' className='btn btn-outline btn-secondary'>Sign up</Link>
+            <div className="navbar-end ">
+                {
+                    user ? <Link onClick={handleSignOut} className='btn btn-neutral'> Sign Out </Link> :
+                        <div className='flex gap-4'>
+                            <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
+                            <Link to='/signup' className='btn btn-outline btn-secondary'>Sign up</Link>
+                        </div>
+                }
             </div>
         </nav>
     );

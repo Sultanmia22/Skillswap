@@ -5,12 +5,12 @@ import Footer from '../Components/Footer/Footer';
 
 const HomeLayouts = () => {
     return (
-        <div className='flex flex-col min-h-screen'>
+        <div className='flex flex-col min-h-screen bg-[#f5f6fa]'>
             <header>
                 <Navbar/>
             </header>
 
-          <main className='flex-grow w-11/12 mx-auto'>
+          <main className='flex-grow w-11/12 mx-auto '>
               <Outlet></Outlet>
           </main>
 

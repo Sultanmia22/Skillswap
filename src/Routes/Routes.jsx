@@ -5,6 +5,10 @@ import Profile from "../Pages/Profile";
 import SkillDetails from "../Pages/SkillDetails";
 import SignUp from "../Pages/SignUp";
 import SignIn from "../Pages/SignIn";
+import ForgatePass from "../Pages/ForgatePass";
+import UpdateProfile from "../Pages/UpdateProfile";
+import PrivetRoutes from "../PrivetContent/PrivetRoutes";
+
 
 
 const router = createBrowserRouter([
@@ -22,7 +26,9 @@ const router = createBrowserRouter([
        },
       {
         path: '/newsdetails/:id',
-        element: <SkillDetails/>,
+        element:<PrivetRoutes>
+          <SkillDetails/>
+        </PrivetRoutes>,
         loader: () => fetch('/skills.json'),
       },
       {
@@ -32,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: '/login',
         element: <SignIn/>
+      },
+      {
+        path: '/forgatepass',
+        element: <ForgatePass/>
+      },
+      {
+        path: '/updateProfile',
+        element: <UpdateProfile/>
       }
     ]
   },

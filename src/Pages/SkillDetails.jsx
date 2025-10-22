@@ -34,8 +34,8 @@ const SkillDetails = () => {
             <title>Detials Pages</title>
             <div className='flex flex-col md:flex-row py-10  gap-20 '>
 
-                <div className=' border-2 border-gray-200 p-8 rounded-lg shadow'>
-                    <img src={detailsData.image} alt="" className='rounded-lg object-cover' />
+                <div className='  p-8 rounded-lg '>
+                    <img src={detailsData.image} alt="" className=' max-w-[800px] border-2 border-gray-200 rounded-lg object-cover shadow' />
                 </div>
 
                 <div className='flex-1 '>
