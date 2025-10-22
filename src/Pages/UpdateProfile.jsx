@@ -24,6 +24,7 @@ const UpdateProfile = () => {
     return (
         <div className='flex flex-col min-h-screen justify-center items-center'>
             <title>Update Profile page</title>
+            <h2 className='text-4xl font-bold my-5'> Update Your Profile  </h2>
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
                     <form onSubmit={handleUpdateProfile}>
