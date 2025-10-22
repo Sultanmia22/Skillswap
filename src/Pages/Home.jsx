@@ -3,7 +3,9 @@ import {  FaBookOpen, FaCalendar } from 'react-icons/fa';
 import PopularSkill from '../Components/PopularSkill';
 import { Link } from 'react-router';
 import TopProviders from '../Components/TopProviders';
-import HowToWork from '../HowToWork';
+import HowToWork from '../Components/HowToWork';
+
+
 
 const Home = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import logoImg from '../../assets/logo.png'
+import logoImg from '../../assets/experience.png'
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
