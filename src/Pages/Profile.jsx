@@ -22,7 +22,7 @@ const Profile = () => {
                             <img src='https://cdn-icons-png.flaticon.com/512/219/219988.png' alt="" className='w-24 h-24 mx-auto ' />
                         </div>
                         <div className='font-semibold text-center pt-5'>
-                            <h1 className='text-3xl'> Sultan Mia </h1>
+                            <h1 className='text-3xl text-white'> Sultan Mia </h1>
                             <p className='text-white'>sultan5623@gmail.com</p>
                         </div>
                     </div>
