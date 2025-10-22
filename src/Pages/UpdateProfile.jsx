@@ -30,9 +30,9 @@ const UpdateProfile = () => {
                 <div class="card-body">
                     <form onSubmit={handleUpdateProfile}>
                         <fieldset class="fieldset">
-                            <label class="label">Email</label>
+                            <label class="label">Enter New Name</label>
                             <input type="text" class="input" placeholder="Name" name='name'/>
-                            <label class="label">Photo URL</label>
+                            <label class="label"> Enter New Photo URL</label>
                             <input type="text" class="input" placeholder="photoURL" name='photourl' />
                            
                             <button class="btn btn-neutral mt-4">Save</button>

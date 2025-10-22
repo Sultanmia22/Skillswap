@@ -2,6 +2,8 @@ import React from 'react';
 import {  FaBookOpen, FaCalendar } from 'react-icons/fa';
 import PopularSkill from '../Components/PopularSkill';
 import { Link } from 'react-router';
+import TopProviders from '../Components/TopProviders';
+import HowToWork from '../HowToWork';
 
 const Home = () => {
     return (
@@ -51,7 +53,13 @@ const Home = () => {
              <PopularSkill></PopularSkill>
            </section>
 
-        
+        <section>
+            <TopProviders/>
+        </section>
+
+        <section>
+            <HowToWork/>
+        </section>
 
         </div>
     );
