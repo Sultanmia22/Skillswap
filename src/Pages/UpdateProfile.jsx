@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router';
 
 const UpdateProfile = () => {
     const {updateUserProfile} = use(AuthContext)
@@ -39,6 +40,8 @@ const UpdateProfile = () => {
                     </form>
                 </div>
             </div>
+
+            <div> <Link to='/' className='btn btn-neutral my-10'> GO Back Home</Link> </div>
         </div>
     );
 };
