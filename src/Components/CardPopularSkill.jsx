@@ -9,7 +9,7 @@ const CardPopularSkill = ({ data, loading }) => {
 
     const { skillId, skillName, providerName, providerEmail, price, rating, slotsAvailable, description, image, category } = data
     return (
-        <div>
+        <div data-aos="zoom-in">
             <div className="card bg-base-100  shadow-sm p-8">
                 <figure>
                     <img

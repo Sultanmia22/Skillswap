@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardPopularSkill from './CardPopularSkill';
+import Loading from './Loading';
 
 const PopularSkill = () => {
     const [skillData,setSkillData] = useState([])
@@ -13,7 +14,7 @@ const PopularSkill = () => {
     }, [])
 
    if(loading){
-    return <h2>Loading.....</h2>
+    return <Loading/>
    } 
 
     return (

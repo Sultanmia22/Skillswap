@@ -1,14 +1,14 @@
 import React, { use } from 'react';
-import { Link, useNavigate} from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
 
 
 const SignUp = () => {
-  
-    const {setUser} = use(AuthContext)
 
-    const {creatUser,updateUserProfile} = use(AuthContext)
+    const { setUser } = use(AuthContext)
+
+    const { creatUser, updateUserProfile } = use(AuthContext)
 
     const naviaget = useNavigate()
 
@@ -20,44 +20,47 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        console.log(name,photoURL,email,password)
+        console.log(name, photoURL, email, password)
 
         //! hanle client regular expression 
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-        if(!passwordRegex.test(password)){
+        if (!passwordRegex.test(password)) {
             toast.error('Password must contain at least 1 uppercase letter, 1 lowercase letter, and be at least 6 characters long');
             return;
         }
 
         //! Creat Account 
-        creatUser(email,password)
-        .then(res => {
-            const users = res.user;
-            setUser(users)
-            event.target.reset();
-            naviaget('/')
-            toast.success('Account Creat Successfull')
-
-            //! Update Profile 
-            updateUserProfile(displayName,photoURL)
+        creatUser(email, password)
             .then(res => {
-                console.log(res)
+                const users = res.user;
+                setUser(users)
+                event.target.reset();
+                naviaget('/')
+                toast.success('Account Creat Successfull')
+
+                //! Update Profile 
+                updateUserProfile(displayName, photoURL)
+                    .then(res => {
+                        console.log(res)
+                    })
+                    .catch(er => {
+                        console.log(er)
+                    })
+
+                // console.log(users)
             })
             .catch(er => {
-                console.log(er)
+                const error = er.message;
+                console.log(error)
+                toast.error(error)
             })
-
-            // console.log(users)
-        })
-        .catch(er => {
-            const error = er.message;
-            console.log(error)
-            toast.error(error)
-        })
     }
 
     return (
-        <div className='flex flex-col justify-center items-center min-h-screen'>
+        <div className='flex flex-col justify-center items-center min-h-screen' data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500">
             <title>Registrasion Page</title>
             <div className='text-center space-y-2 mb-5'>
                 <h2 className='text-4xl font-bold'> Creat Your Account </h2>
@@ -66,28 +69,28 @@ const SignUp = () => {
 
             <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
-                   <form onSubmit={handleRegister}>
-                     <fieldset class="fieldset">
-                        {/* NAME */}
-                         <label class="label">Name</label>
-                        <input type="text" class="input" placeholder="Name" name='name'/>
+                    <form onSubmit={handleRegister}>
+                        <fieldset class="fieldset">
+                            {/* NAME */}
+                            <label class="label">Name</label>
+                            <input type="text" class="input" placeholder="Name" name='name' />
 
-                        {/* PHOTO URL */}
-                         <label class="label">Photo URL</label>
-                        <input type="text" class="input" placeholder="Photo URL" name='photourl'/>
+                            {/* PHOTO URL */}
+                            <label class="label">Photo URL</label>
+                            <input type="text" class="input" placeholder="Photo URL" name='photourl' />
 
-                        {/* EMAIL */}
-                        <label class="label">Email</label>
-                        <input type="email" class="input" placeholder="Email" name='email'/>
+                            {/* EMAIL */}
+                            <label class="label">Email</label>
+                            <input type="email" class="input" placeholder="Email" name='email' />
 
-                         {/* PASSWORD */}
-                        <label class="label">Password</label>
-                        <input type="password" class="input" placeholder="Password" name='password'/>
-                        {/* <div><a class="link link-hover">Forgot password?</a></div> */}
-                        <button class="btn btn-neutral mt-4">Register</button>
-                    </fieldset>
-                   </form>
-                   <p> Already Have an Account ? Please <Link to='/login' className='font-semibold text-pink-700 hover:underline'> Login </Link> </p>
+                            {/* PASSWORD */}
+                            <label class="label">Password</label>
+                            <input type="password" class="input" placeholder="Password" name='password' />
+                            {/* <div><a class="link link-hover">Forgot password?</a></div> */}
+                            <button class="btn btn-neutral mt-4">Register</button>
+                        </fieldset>
+                    </form>
+                    <p> Already Have an Account ? Please <Link to='/login' className='font-semibold text-pink-700 hover:underline'> Login </Link> </p>
                 </div>
             </div>
         </div>

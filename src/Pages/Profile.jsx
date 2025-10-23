@@ -15,7 +15,7 @@ const Profile = () => {
                 <p className='text-xl font-semibold my-2'> Manage your account information </p>
             </div>
 
-                <div className='flex flex-col lg:flex-row justify-center'>
+                <div className='flex flex-col lg:flex-row justify-center' data-aos="zoom-in-up">
                     <div className='bg-linear-65 from-purple-500 to-pink-500 flex flex-col justify-center items-center px-20 py-20'>
                         <div className='p-1 border-2 rounded-full border-gray-800'>
                             <img src={user?.photoURL} alt="" className='w-24 h-24 mx-auto rounded-full' />

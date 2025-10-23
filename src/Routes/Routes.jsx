@@ -22,7 +22,9 @@ const router = createBrowserRouter([
         },
        {
         path: '/profile',
-        element: <Profile/>
+        element: <PrivetRoutes>
+          <Profile/>
+        </PrivetRoutes>
        },
       {
         path: '/newsdetails/:id',

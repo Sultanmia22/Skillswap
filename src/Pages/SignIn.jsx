@@ -11,14 +11,14 @@ const googleProvider = new GoogleAuthProvider()
 
 const SignIn = () => {
 
-    const { signInUser,setUser} = use(AuthContext)
+    const { signInUser, setUser } = use(AuthContext)
 
     const navigate = useNavigate()
 
     const [email, setEmail] = useState(null)
 
     const location = useLocation()
-    
+
 
     //! Handle Sign In 
     const handleSignIn = (event) => {
@@ -35,16 +35,16 @@ const SignIn = () => {
                 const users = res.user;
                 setUser(users)
                 event.target.reset();
-               navigate(location.state || '/');
+                navigate(location.state || '/');
                 toast.success('Login Successfull');
                 console.log(users)
             })
-             .catch(er => {
+            .catch(er => {
                 const error = er.message;
                 toast.error(error)
             })
 
-        
+
 
     }
 
@@ -54,8 +54,8 @@ const SignIn = () => {
         signInWithPopup(auth, googleProvider)
             .then(res => {
                 const users = res.user;
-               setUser(users)
-               navigate(location.state || '/');
+                setUser(users)
+                navigate(location.state || '/');
                 toast.success('Login Successfull')
             })
             .catch(er => {
@@ -67,7 +67,9 @@ const SignIn = () => {
 
 
     return (
-        <div className='flex flex-col justify-center items-center min-h-screen'>
+        <div className='flex flex-col justify-center items-center min-h-screen' data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
             <title>Login Page</title>
             <div className='text-center space-y-2 mb-5'>
                 <h2 className='text-4xl font-bold'> Welcome Back! </h2>

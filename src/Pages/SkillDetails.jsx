@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { toast } from 'react-toastify';
+import Loading from '../Components/Loading';
 
 const SkillDetails = () => {
 
-    const [detailsData, setDetailsData] = useState({})
+    const [detailsData, setDetailsData] = useState(null)
 
     const { id } = useParams();
 
@@ -18,7 +19,7 @@ const SkillDetails = () => {
     }, [data, id])
 
     if (!detailsData) {
-        return <h2>Loading....</h2>
+        return <Loading/>
     }
 
     const { skillId, skillName, providerName, providerEmail, price, rating, slotsAvailable, description, image, category } = detailsData
@@ -30,7 +31,7 @@ const SkillDetails = () => {
     }
 
     return (
-        <div>
+        <div data-aos="zoom-out-down">
             <title>Detials Pages</title>
             <div className='flex flex-col md:flex-row py-10  gap-20 '>
 

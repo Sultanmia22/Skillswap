@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import Loading from './Loading';
 
 const TopProviders = () => {
     const [skillData, setSkillData] = useState([])
@@ -25,13 +26,13 @@ const TopProviders = () => {
     }, [])
 
     if(loading){
-        return <h2>Loading...</h2>
+        return <Loading></Loading>
     }
 
 
 
     return (
-        <div className='py-5'>
+        <div className='py-5' data-aos="fade-right">
             <h1 className='text-3xl font-bold text-center pb-5 '> Top Rated Providers </h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
                 {

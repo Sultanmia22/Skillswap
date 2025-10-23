@@ -2,7 +2,7 @@ import React from 'react';
 
 const HowToWork = () => {
     return (
-        <div className='mb-6'>
+        <div className='mb-6' data-aos="fade-left">
             <h1 className='text-3xl font-bold text-center py-5'> How To Works </h1>
             <div className='grid md:grid-cols-3 text-center text-gray-800 bg-white shadow-md p-10 gap-5 '>
                 <div className='bg-[#81ecec] px-10 py-5 space-y-3 rounded-lg'>
