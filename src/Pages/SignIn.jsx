@@ -28,7 +28,7 @@ const SignIn = () => {
 
         const password = event.target.password.value;
 
-        console.log(email, password);
+        // console.log(email, password);
 
         signInUser(email, password)
             .then(res => {
@@ -37,7 +37,7 @@ const SignIn = () => {
                 event.target.reset();
                 navigate(location.state || '/');
                 toast.success('Login Successfull');
-                console.log(users)
+                // console.log(users)
             })
             .catch(er => {
                 const error = er.message;

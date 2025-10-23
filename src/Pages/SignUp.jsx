@@ -20,7 +20,7 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        console.log(name, photoURL, email, password)
+        // console.log(name, photoURL, email, password)
 
         //! hanle client regular expression 
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -41,17 +41,17 @@ const SignUp = () => {
                 //! Update Profile 
                 updateUserProfile(displayName, photoURL)
                     .then(res => {
-                        console.log(res)
+                        // console.log(res)
                     })
                     .catch(er => {
-                        console.log(er)
+                        // console.log(er)
                     })
 
                 // console.log(users)
             })
             .catch(er => {
                 const error = er.message;
-                console.log(error)
+                // console.log(error)
                 toast.error(error)
             })
     }

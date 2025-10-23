@@ -32,7 +32,7 @@ const TopProviders = () => {
 
 
     return (
-        <div className='py-5' data-aos="fade-right">
+        <div className='py-5' data-aos="fade-left">
             <h1 className='text-3xl font-bold text-center pb-5 '> Top Rated Providers </h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
                 {

@@ -15,7 +15,7 @@ const Feedback = () => {
             setSkillData(data)
         })
         .catch(er => {
-            console.log(er)
+            // console.log(er)
         })
         .finally(setLoading(false))
 

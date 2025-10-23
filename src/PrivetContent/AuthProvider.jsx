@@ -55,7 +55,7 @@ const AuthProvider = ({children}) => {
         loading
     }
 
-    console.log(user)
+    // console.log(user)
 
     return <AuthContext value={authData}>
         {children}
