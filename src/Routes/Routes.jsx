@@ -8,6 +8,7 @@ import SignIn from "../Pages/SignIn";
 import ForgatePass from "../Pages/ForgatePass";
 import UpdateProfile from "../Pages/UpdateProfile";
 import PrivetRoutes from "../PrivetContent/PrivetRoutes";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayouts/>,
+    errorElement:<ErrorPage/>,
     children:[
         {
             index:true,

@@ -4,7 +4,7 @@ import { LiaCommentSolid } from 'react-icons/lia';
 
 const CardOfFeedback = ({data}) => {
     return (
-        <div className='flex flex-col justify-between shadow-md p-10 bg-white mb-4' data-aos="flip-left">
+        <div className='flex flex-col justify-between shadow-md p-10 bg-white mb-4 rounded-xl' data-aos="flip-left">
            <div className='flex items-center gap-3'>
             <div className='text-center space-y-1'>
                 <img src={data.image} alt="" className='rounded-full' />
