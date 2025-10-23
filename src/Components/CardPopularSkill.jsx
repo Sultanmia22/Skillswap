@@ -14,7 +14,7 @@ const CardPopularSkill = ({ data, loading }) => {
                 <figure>
                     <img
                         src={image}
-                        alt="Shoes" className='-w-full h-[400px]' />
+                        alt="Shoes" className=' w-[300px] h-[300px] md:w-full md:h-[400px]' />
                 </figure>
                 <div className="">
                     <h2 className="card-title text-2xl py-4"> {skillName} </h2>

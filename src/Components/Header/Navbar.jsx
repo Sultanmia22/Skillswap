@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
 const Navbar = () => {
-    const { user,signOutUser ,setUser} = use(AuthContext)
+    const { user, signOutUser, setUser } = use(AuthContext)
     const links = <>
         <NavLink to='/' className='font-semibold  text-xl'> Home </NavLink>
         <NavLink to='/profile' className='font-semibold text-xl'> My Profile </NavLink>
@@ -13,13 +13,13 @@ const Navbar = () => {
     //! Sign Out Function 
     const handleSignOut = () => {
         signOutUser()
-        .then(() => {
-            setUser(null)
-            toast.success('Sign Out Successfull')
-        })
-        .catch( () => {
+            .then(() => {
+                setUser(null)
+                toast.success('Sign Out Successfull')
+            })
+            .catch(() => {
 
-        })
+            })
     }
 
     return (
@@ -48,8 +48,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end ">
                 {
-                    user ? <Link onClick={handleSignOut} className='btn btn-neutral'> Sign Out </Link> :
-                        <div className='flex gap-4'>
+                    user ?
+                        <div className='flex gap-4 items-center'>
+                            <div> <img src={user?.photoURL} alt="" className='w-14 h-14 rounded-full' /> </div>
+                            <Link onClick={handleSignOut} className='btn btn-neutral'> Sign Out </Link>
+                        </div>
+                        :
+                        <div className='flex gap-4 items-center'>
                             <Link to='/login' className='btn btn-outline btn-primary'>Login</Link>
                             <Link to='/signup' className='btn btn-outline btn-secondary'>Sign up</Link>
                         </div>

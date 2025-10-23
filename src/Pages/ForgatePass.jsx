@@ -1,5 +1,5 @@
 import React, { use, useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { Navigate, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
 
@@ -10,6 +10,8 @@ const ForgatePass = () => {
     const [email,setEmail] = useState('')
 
     const location = useLocation()
+    const navigate = useNavigate()
+    
     useEffect(() => {
         if(location.state){
             setEmail(location.state)
@@ -27,6 +29,8 @@ const ForgatePass = () => {
         .then( () => {
             toast.success('Check Your Email for Reset Password')
             setEmail('')
+            navigate('/login')
+
         })
         .catch(er => {
             toast.error(er)

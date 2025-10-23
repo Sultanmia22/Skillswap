@@ -20,7 +20,7 @@ const Home = () => {
                         <h1 className='md:text-6xl font-bold text-center text-white '>Share Your Skills, Learn Something New</h1>
                         <p className='md:text-3xl font-bold text-center'>Connect with local experts and trade skills in your community</p>
                         <button className='btn btn-neutral'> Explore Skills Now </button>
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <div className="absolute left-5 right-5 top-1/2 md:flex -translate-y-1/2 transform justify-between hidden ">
                         <a href="#slide3" className="btn btn-circle">❮</a>
                         <a href="#slide2" className="btn btn-circle">❯</a>
                     </div>
@@ -32,7 +32,7 @@ const Home = () => {
                         <h1 className='md:text-6xl font-bold text-center text-white '>Learning Made Easy in 3 Steps</h1>
                         <p className='md:text-3xl font-bold'>Browse, Book, and Rate - It's that simple!</p>
                         <button className='btn btn-primary'> Get Started Free </button>
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <div className="absolute left-5 right-5 top-1/2 md:flex -translate-y-1/2 transform justify-between hidden">
                         <a href="#slide1" className="btn btn-circle">❮</a>
                         <a href="#slide3" className="btn btn-circle">❯</a>
                     </div>
@@ -45,7 +45,7 @@ const Home = () => {
                         <h1 className='md:text-6xl font-bold text-center text-white '> Join 5000+ Skill Sharers Today</h1>
                         <p className='md:text-3xl font-bold'>Be part of a thriving learning community!</p>
                         <button className='btn btn-secondary'> Sign Up Now </button>
-                    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <div className="absolute left-5 right-5 top-1/2 md:flex -translate-y-1/2 transform justify-between hidden ">
                         <a href="#slide2" className="btn btn-circle">❮</a>
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>

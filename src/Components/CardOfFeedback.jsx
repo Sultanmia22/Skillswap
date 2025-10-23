@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiOutlineLike } from 'react-icons/ai';
+import { AiOutlineLike, AiTwotoneDislike } from 'react-icons/ai';
 import { LiaCommentSolid } from 'react-icons/lia';
 
 const CardOfFeedback = ({data}) => {
@@ -21,7 +21,10 @@ const CardOfFeedback = ({data}) => {
            </div>
 
            <div className='flex justify-between items-center'>
-             <p><AiOutlineLike size={21} /></p>
+             <div className='flex gap-1 items-center'>
+            <p><AiOutlineLike size={21} /></p>
+             <p><AiTwotoneDislike size={21} /></p>
+             </div>
              <p> <LiaCommentSolid size={21} /></p>
            </div>
         </div>

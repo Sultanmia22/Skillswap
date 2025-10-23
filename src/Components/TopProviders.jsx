@@ -4,10 +4,11 @@ import { Link } from 'react-router';
 const TopProviders = () => {
     const [skillData, setSkillData] = useState([])
 
-
+    const [loading,setLoading] = useState(true)
 
 
     useEffect(() => {
+        setLoading(true)
         fetch('/skills.json')
             .then(res => res.json())
             .then(data => {
@@ -15,9 +16,17 @@ const TopProviders = () => {
                     .slice(0, 3)
                 setSkillData(topProviderData)
             })
+            .catch( () => {
+
+            })
+            .finally(setLoading(false))
 
 
     }, [])
+
+    if(loading){
+        return <h2>Loading...</h2>
+    }
 
 
 
@@ -29,7 +38,7 @@ const TopProviders = () => {
                     skillData.map(data =>
                         <div className='bg-white shadow-md p-5'>
                             <figure>
-                                <img src={data.image} alt="" className='h-[400px]'/>
+                                <img src={data.image} alt="" className='w-[300px] h-[300px] md:w-full md:h-[400px]'/>
                             </figure>
                             <div className='py-5'>
                                 <h1 className='text-xl font-bold'> Skill Name : {data.skillName} </h1>

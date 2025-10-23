@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { use } from 'react';
+import { FaEdit } from 'react-icons/fa';
 import { MdEdit } from 'react-icons/md';
 import { Link } from 'react-router';
+import { AuthContext } from '../PrivetContent/AuthContext';
 
 const Profile = () => {
+    const {user} = use(AuthContext)
     return (
         <div className='py-10'>
             <title>Profile Page</title>
@@ -12,38 +15,51 @@ const Profile = () => {
                 <p className='text-xl font-semibold my-2'> Manage your account information </p>
             </div>
 
-            <div className=' xl:w-8/12 mx-auto shadow-md'>
-
-                {/* Profile Card  */}
-              
-
-                    <div className='bg-linear-65 from-purple-500 to-pink-500 w-full h-[400px] flex flex-col justify-center items-center'>
-                        <div className='p-2 border-2 rounded-full border-white'>
-                            <img src='https://cdn-icons-png.flaticon.com/512/219/219988.png' alt="" className='w-24 h-24 mx-auto ' />
+                <div className='flex flex-col lg:flex-row justify-center'>
+                    <div className='bg-linear-65 from-purple-500 to-pink-500 flex flex-col justify-center items-center px-20 py-20'>
+                        <div className='p-1 border-2 rounded-full border-gray-800'>
+                            <img src={user?.photoURL} alt="" className='w-24 h-24 mx-auto rounded-full' />
                         </div>
-                        <div className='font-semibold text-center pt-5'>
-                            <h1 className='text-3xl text-white'> Sultan Mia </h1>
-                            <p className='text-white'>sultan5623@gmail.com</p>
+                        <div className='font-semibold text-center pt-3'>
+                            <h1 className='text-3xl text-white'> {user?.displayName} </h1>
+                            <p className='text-white'>{user?.email}</p>
                         </div>
                     </div>
 
+                    <div className='bg-gray-700 p-4 md:p-10 lg:w-[600px]'>
+                        <h3 className='text-xl font-bold mb-2 text-white'> Information  </h3>
+                        <div className='w-full bg-white h-[1px]'></div>
 
-                    <div className='h-[600px] w-full py-10'>
-                        <div className='bg-blue-100 flex justify-between p-10 gap-8 my-4'>
-                            <div className='flex flex-col  lg:text-xl space-y-4 '>
-                                <h1> <span>Name:</span> Emon </h1>
-                                <h1><span>Address:</span> Dhaka Bangladesh</h1>
+                         <div className='flex  justify-between'>
+                            <div className='my-6 space-y-4'>
+                            <div className='space-y-2'>
+                                <p className='font-bold text-xl text-white'>Name</p>
+                                <p className='text-gray-50 font-semibold'> {user?.displayName}  </p>
                             </div>
-
-
-                            <div className='flex flex-col  lg:text-xl space-y-4 '>
-                                <h1><span>Email:</span> sultan5623@gmail.com </h1>
-                                <p> <span>Phone:</span> 013454346543 </p>
+                            <div className='space-y-2'>
+                                 <p className='font-bold text-xl text-white'>Address</p>
+                                <p className='text-gray-50 font-semibold'> Dhaka Bangladesh </p>
+                               
                             </div>
-                        </div>
-                        <div className='flex justify-center'>  <Link to='/updateProfile' className='btn btn-primary mx-auto md:text-xl'> <MdEdit /> Update Profile </Link> </div>
+                         </div>
+
+                         <div className=' my-6 space-y-4'>
+                            <div className='space-y-2'>
+                                <p className='font-bold text-xl text-white'> Email </p>
+                                <p className='text-gray-50 font-semibold'> {user?.email} </p>
+                            </div>
+                            <div className='space-y-2'>
+                                <p className='font-bold text-xl text-white'> Phone </p>
+                                <p className='text-gray-50 font-semibold'>01746931945</p>
+                            </div>
+                         </div>
+                         </div>
+                         
+                          <div className='w-full bg-white h-[1px]'></div>
+
+                         <div className='flex justify-center py-5'>  <Link to='/updateProfile' className='btn bg-white text-black'> <FaEdit /> Update Profile </Link> </div>
                     </div>
-            </div>
+                </div>
         </div>
     );
 };
