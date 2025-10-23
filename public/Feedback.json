@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Rafiul Islam",
+    "feedback": "I purchased the 'Full Stack Web Development' course, and it exceeded my expectations! The lessons are well-structured, and the instructor explains every concept in detail. I really liked the practical projects — they helped me build confidence to start freelancing. I highly recommend this course to anyone serious about web development.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/men/12.jpg",
+    "date": "2025-10-12"
+  },
+  {
+    "id": 2,
+    "name": "Mim Akter",
+    "feedback": "The 'Spoken English Masterclass' was absolutely worth it! The videos are very clear, and the instructor gives a lot of real-life speaking examples. I could see my fluency improve within just two weeks. The quizzes and downloadable notes were also really helpful. Definitely one of the best online courses I’ve ever bought.",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/45.jpg",
+    "date": "2025-10-08"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Rahman",
+    "feedback": "I enrolled in the 'Digital Marketing for Beginners' course. The content is rich and easy to understand, but I think some modules could use more case studies. Still, I learned how to run Facebook ads effectively, and the instructor was responsive to my questions. Overall, great value for money!",
+    "rating": 4,
+    "image": "https://randomuser.me/api/portraits/men/33.jpg",
+    "date": "2025-10-05"
+  },
+  {
+    "id": 4,
+    "name": "Sadia Noor",
+    "feedback": "I took the 'Professional Baking and Cake Design' course, and it was such a delightful experience! Every video was beautifully produced and easy to follow. I even started taking small cake orders after finishing the course. The recipes, tips, and instructor feedback were amazing. Totally worth every penny!",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/21.jpg",
+    "date": "2025-10-15"
+  },
+  {
+    "id": 5,
+    "name": "Mahmud Hasan",
+    "feedback": "I bought the 'Graphic Design with Canva' course. The tutorials are detailed, but I faced a few buffering issues with the video player. However, the content quality and practical exercises were really good. I learned to design social media posts professionally. Hope the platform improves the streaming soon.",
+    "rating": 4,
+    "image": "https://randomuser.me/api/portraits/men/54.jpg",
+    "date": "2025-10-18"
+  },
+  {
+    "id": 6,
+    "name": "Nusrat Jahan",
+    "feedback": "The 'Photography for Beginners' course completely changed how I see the world through my lens. The instructor explains lighting, angles, and editing so simply that even a total beginner can follow along. I’ve started sharing my photos online and already got positive feedback. Loved the learning experience!",
+    "rating": 5,
+    "image": "https://randomuser.me/api/portraits/women/16.jpg",
+    "date": "2025-10-20"
+  }
+]

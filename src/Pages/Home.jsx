@@ -4,6 +4,7 @@ import PopularSkill from '../Components/PopularSkill';
 import { Link } from 'react-router';
 import TopProviders from '../Components/TopProviders';
 import HowToWork from '../Components/HowToWork';
+import Feedback from '../Components/Feedback';
 
 
 
@@ -17,7 +18,7 @@ const Home = () => {
                      
                         <p> <FaBookOpen size={50} className='text-white' /></p>
                         <h1 className='md:text-6xl font-bold text-center text-white '>Share Your Skills, Learn Something New</h1>
-                        <p className='md:text-3xl font-bold'>Connect with local experts and trade skills in your community</p>
+                        <p className='md:text-3xl font-bold text-center'>Connect with local experts and trade skills in your community</p>
                         <button className='btn btn-neutral'> Explore Skills Now </button>
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
                         <a href="#slide3" className="btn btn-circle">❮</a>
@@ -61,6 +62,10 @@ const Home = () => {
 
         <section>
             <HowToWork/>
+        </section>
+
+        <section>
+            <Feedback/>
         </section>
 
         </div>
