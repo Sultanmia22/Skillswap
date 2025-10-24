@@ -39,4 +39,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 10. Smooth Animations with AOS/Framer Motion
 
-# npm packages : TailwindCss , React ,React Router, React Toastify,React Icons,Firebase, Daisy Ui ,AOS Animation etc    
+# npm packages : TailwindCss , React ,React Router, React Toastify,React Icons,Firebase, Daisy Ui ,AOS Animation etc  
+
+# Live link : https://skillswap-apps.netlify.app/ 

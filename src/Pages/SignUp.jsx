@@ -1,7 +1,8 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const SignUp = () => {
@@ -9,6 +10,8 @@ const SignUp = () => {
     const { setUser } = use(AuthContext)
 
     const { creatUser, updateUserProfile } = use(AuthContext)
+
+    const [showPass, setShowPass] = useState(false)
 
     const naviaget = useNavigate()
 
@@ -56,6 +59,11 @@ const SignUp = () => {
             })
     }
 
+    //! handle Show Pass
+    const handleShowPass = () => {
+        setShowPass(!showPass)
+    }
+
     return (
         <div className='flex flex-col justify-center items-center min-h-screen' data-aos="fade-left"
             data-aos-anchor="#example-anchor"
@@ -85,7 +93,10 @@ const SignUp = () => {
 
                             {/* PASSWORD */}
                             <label class="label">Password</label>
-                            <input type="password" class="input" placeholder="Password" name='password' />
+                            <div className='relative'>
+                                <input type={showPass ? 'text' : 'password'} class="input" placeholder="Password" name='password' />
+                                <button onClick={handleShowPass} className='absolute top-[13px] right-6' type='button'> {showPass ? <FaEyeSlash /> : <FaEye />}  </button>
+                            </div>
                             {/* <div><a class="link link-hover">Forgot password?</a></div> */}
                             <button class="btn btn-neutral mt-4">Register</button>
                         </fieldset>

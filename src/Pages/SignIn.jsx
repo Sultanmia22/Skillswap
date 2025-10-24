@@ -6,12 +6,15 @@ import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '../Firebase/Firebase.int';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const googleProvider = new GoogleAuthProvider()
 
 const SignIn = () => {
 
     const { signInUser, setUser } = use(AuthContext)
+    
+    const [showPass,setShowPass] = useState(false)
 
     const navigate = useNavigate()
 
@@ -64,6 +67,12 @@ const SignIn = () => {
             })
     }
 
+    //! handle Show Pass 
+
+    const handleShowPass = () => {
+        setShowPass(!showPass)
+    }
+
 
 
     return (
@@ -83,7 +92,12 @@ const SignIn = () => {
                             <label class="label">Email</label>
                             <input onChange={(e) => setEmail(e.target.value)} type="email" class="input" placeholder="Email" name='email' />
                             <label class="label">Password</label>
-                            <input type="password" class="input" placeholder="Password" name='password' />
+
+                          <div className='relative'>
+                              <input type={showPass ? 'text' : 'password'} class="input" placeholder="Password" name='password' />
+                              <button onClick={handleShowPass} className='absolute top-[13px] right-6' type='button'> {showPass ? <FaEyeSlash /> : <FaEye />}  </button>
+                          </div>
+
                             <div><Link state={email} to='/forgatepass' type='button' class="link link-hover">Forgot password?</Link></div>
                             <button class="btn btn-neutral mt-4">Login</button>
                             <div className='flex gap-4 justify-center items-center'>
