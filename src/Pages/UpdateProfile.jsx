@@ -1,9 +1,10 @@
 import React, { use } from 'react';
 import { AuthContext } from '../PrivetContent/AuthContext';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const UpdateProfile = () => {
+    const navigate = useNavigate()
     const { updateUserProfile, setUser, user } = use(AuthContext)
 
     const handleUpdateProfile = (event) => {
@@ -17,6 +18,7 @@ const UpdateProfile = () => {
                 setUser(() => ({ ...user, displayName, photoURL }))
                 event.target.reset()
                 toast.success('Profile Update Successfull')
+                navigate('/')
             })
             .catch(() => {
                 toast.error('Something was Wrong! Try Again')

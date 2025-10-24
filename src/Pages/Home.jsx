@@ -1,5 +1,5 @@
 import React from 'react';
-import {  FaBookOpen, FaCalendar } from 'react-icons/fa';
+import {  FaBookOpen, FaCalendar, FaUsers } from 'react-icons/fa';
 import PopularSkill from '../Components/PopularSkill';
 import { Link } from 'react-router';
 import TopProviders from '../Components/TopProviders';
@@ -26,7 +26,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div id="slide2" className="carousel-item flex relative justify-center items-center flex-col w-full bg-linear-to-t from-sky-500 to-indigo-500 gap-5 my-6 rounded-lg py-10 md:py-32">
+                <div id="slide2" className="carousel-item flex relative justify-center items-center flex-col w-full bg-linear-to-t from-[#2ed573] to-indigo-500 gap-5 my-6 rounded-lg py-10 md:py-32">
                      
                         <p> <FaCalendar size={50} className='text-white' /></p>
                         <h1 className='md:text-6xl font-bold text-center text-white '>Learning Made Easy in 3 Steps</h1>
@@ -41,7 +41,7 @@ const Home = () => {
 
                  <div id="slide3" className="carousel-item flex relative justify-center items-center flex-col w-full bg-linear-to-bl from-violet-500 to-fuchsia-500 gap-5 my-6 rounded-lg py-10 md:py-32">
                      
-                        <p> <FaCalendar size={50} className='text-white' /></p>
+                        <p> <FaUsers size={50} className='text-white' /></p>
                         <h1 className='md:text-6xl font-bold text-center text-white '> Join 5000+ Skill Sharers Today</h1>
                         <p className='md:text-3xl font-bold'>Be part of a thriving learning community!</p>
                         <button className='btn btn-secondary'> Sign Up Now </button>

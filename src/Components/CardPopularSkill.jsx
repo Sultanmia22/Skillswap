@@ -14,7 +14,7 @@ const CardPopularSkill = ({ data, loading }) => {
                 <figure>
                     <img
                         src={image}
-                        alt="Shoes" className=' w-[300px] h-[300px] md:w-full md:h-[400px]' />
+                        alt="Shoes" className=' w-[300px] h-[300px] md:w-full md:h-[400px] rounded-xl' />
                 </figure>
                 <div className="">
                     <h2 className="card-title text-2xl py-4"> {skillName} </h2>
@@ -23,7 +23,7 @@ const CardPopularSkill = ({ data, loading }) => {
                         <p className='text-xl font-semibold'> Price: {price}$</p>
                     </div>
                     <div className="card-actions justify-end pt-5">
-                        <Link to={`/newsdetails/${skillId}`} className="btn btn-primary">Skill Details</Link>
+                        <Link to={`/newsdetails/${skillId}`} className="btn bg-[#001F3F] text-white">Skill Details</Link>
                     </div>
                 </div>
             </div>
